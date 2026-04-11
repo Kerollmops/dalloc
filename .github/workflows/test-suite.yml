@@ -54,7 +54,6 @@ jobs:
       fail-fast: false
       matrix:
         os: [windows-2022]
-    if: github.event_name != 'merge_group'
     steps:
       - uses: actions/checkout@v5
       - name: Cache dependencies
@@ -78,7 +77,6 @@ jobs:
       fail-fast: false
       matrix:
         os: [macos-14]
-    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     steps:
       - uses: actions/checkout@v5
       - name: Cache dependencies
