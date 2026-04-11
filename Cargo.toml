@@ -1,0 +1,13 @@
+[package]
+name = "dalloc"
+description = "A disk allocator that uses memory mapping as a page cache"
+version = "0.0.1"
+edition = "2024"
+
+[dependencies]
+memmap2 = "0.9.10"
+parking_lot = "0.12.5"
+fs2 = "0.4.3"
+
+[dev-dependencies]
+rayon = "1.11.0"

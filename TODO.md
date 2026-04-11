@@ -1,0 +1,6 @@
+- [ ] More tests
+  - [x] Setup a small CI to test everything
+  - [ ] How to test concurrent reads/writes?
+  - [ ] Use a lot of debug_assert
+- [ ] Review dependency features and use only the least amount of them
+- [ ] Not sure about the name
