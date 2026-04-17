@@ -10,7 +10,7 @@ exclude = ["src/page_size.rs"]
 memmap2 = "0.9.10"
 page_size = "0.6.0"
 parking_lot = "0.12.5"
-bytemuck = { version = "1.25.0", features = ["derive", "min_const_generics"] }
+zerocopy = { version = "0.8.48", features = ["std", "derive"] }
 
 [dev-dependencies]
 rayon = "1.11.0"
