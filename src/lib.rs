@@ -1,4 +1,4 @@
-use core::mem::size_of;
+use std::mem::{self, size_of};
 use std::os::unix::fs::FileExt;
 use std::path::PathBuf;
 use std::{fs::File, io};
@@ -156,8 +156,7 @@ impl RootPage {
             WritableRootPage::Beta => WritableRootPage::Alpha as u8,
         };
 
-        self.root_alpha = self.root_beta;
-        self.root_beta = self.root_alpha;
+        mem::swap(&mut self.root_alpha, &mut self.root_beta);
 
         Ok(())
     }
